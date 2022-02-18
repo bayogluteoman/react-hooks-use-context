@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Interests from "./Interests";
 import { UserContext } from "../context/user";
 
-function Profile({ theme }) {
+function Profile() {
   // call useContext with our UserContext
   const { user } = useContext(UserContext);
 
@@ -12,7 +12,7 @@ function Profile({ theme }) {
   return (
     <div>
       <h2>{user.name}'s Profile</h2>
-      <Interests interests={user.interests} theme={theme} />
+      <Interests interests={user.interests} />
     </div>
   );
 }
